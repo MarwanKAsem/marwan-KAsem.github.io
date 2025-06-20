@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marwan Kasem | Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://unpkg.com/framer-motion@7.6.16/dist/framer-motion.umd.js"></script>
+    <script defer src="https://unpkg.com/lucide@0.263.0/dist/umd/lucide.js"></script>
+    <style>
+      body {
+        background-color: #050a14;
+        color: white;
+        font-family: sans-serif;
+        overflow-x: hidden;
+      }
+      .star {
+        position: absolute;
+        background: white;
+        border-radius: 50%;
+        opacity: 0;
+        animation: twinkle 5s infinite;
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; transform: scale(1.2); }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-center py-20">
+      <h1 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+        Marwan Kasem
+      </h1>
+      <h2 class="text-xl mt-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300">
+        Phonetics & Linguistics Specialist
+      </h2>
+    </header>
+
+    <section class="px-6 md:px-20">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-gray-300">
+            Specializing in Phonetics and Linguistics, with hard skills in sound engineering, transcription,
+            Python, NLTK, NumPy, and more. A creative individual with experience in video editing and design.
+          </p>
+          <ul class="mt-6 text-sm text-gray-400 space-y-2">
+            <li><strong>📍 Location:</strong> Agamy, Alexandria, Egypt</li>
+            <li><strong>📞 Phone:</strong> 01020745631 | 01221101413</li>
+            <li><strong>✉️ Email:</strong> marokasem85@gmail.com</li>
+            <li><strong>🌍 Website:</strong> <a href="https://marwankasem.github.io/" class="text-purple-400">marwankasem.github.io</a></li>
+          </ul>
+        </div>
+        <div class="mx-auto">
+          <img src="/images/profile.png" alt="Marwan Kasem" class="w-72 h-96 object-cover rounded-xl shadow-lg border border-purple-500/20" />
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-20 px-6 md:px-20">
+      <h2 class="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+        Skills
+      </h2>
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">Python</span>
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">NLTK</span>
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">Pandas</span>
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">C++</span>
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">Machine Learning</span>
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">Video Editing</span>
+        <span class="bg-purple-900/30 text-purple-300 px-4 py-2 rounded-md">Sound Engineering</span>
+      </div>
+    </section>
+
+    <footer class="mt-32 text-center py-10 border-t border-purple-800">
+      <p class="text-sm text-gray-500">&copy; <span id="year"></span> Marwan Kasem. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-6">
+        <a href="#" class="text-purple-400">GitHub</a>
+        <a href="#" class="text-purple-400">LinkedIn</a>
+        <a href="mailto:marokasem85@gmail.com" class="text-purple-400">Email</a>
+        <a href="https://marwankasem.github.io/" class="text-purple-400">Website</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear()
+
+      // Create animated stars
+      for (let i = 0; i < 100; i++) {
+        const star = document.createElement("div")
+        star.className = "star"
+        star.style.width = `${Math.random() * 3 + 1}px`
+        star.style.height = star.style.width
+        star.style.left = `${Math.random() * 100}%`
+        star.style.top = `${Math.random() * 100}%`
+        star.style.animationDuration = `${Math.random() * 4 + 2}s`
+        document.body.appendChild(star)
+      }
+    </script>
+  </body>
+</html>
